@@ -8,3 +8,6 @@ def counter(request):
     words = len(text.split())
     char = len(text)
     return render(request, 'counter.html', {'word': words, 'char': char, 'text': text})
+
+def register(request):
+    return render(request, 'register.html', {})

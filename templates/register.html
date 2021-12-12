@@ -1,0 +1,50 @@
+{% load static %}
+
+<section class="container">
+    <div class="col-md-6 offset-md-3 shadow p-5 mt-5 bg-light">
+        <div class="text-center">
+            <h1>SIGNUP FORM</h1>
+        </div>
+        <form method="POST" action="">
+            {% csrf_token%}
+            <p>Registration Type:</p>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected>Select</option>
+                <option value="1">New Member</option>
+                <option value="2">Old Member</option>
+            </select>
+            <p>MUFC Official membership No.</p>
+            <input type="number" name="mnumber" placeholder="If you already have one or renewal" class="form-control">
+            <p>First Name:</p>
+            <input type="text" name="fname" class="form-control">
+            <p>Last Name:</p>
+            <input type="text" name="lname" class="form-control">
+            <p>Date Of Birth:</p>
+            <input type="date" name="date" class="form-control">
+            <p>Gender:</p>
+            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                <option selected>Select</option>
+                <option value="1">Male</option>
+                <option value="2">Female</option>
+            </select>
+            <p>Email:</p>
+            <input type="email" name="email" class="form-control">
+            <p>Password:</p>
+            <input type="password" name="password" class="form-control">
+            <p>Confirm Password:</p>
+            <input type="password2" name="password2" class="form-control">
+            <p>Phone No.:</p>
+            <input type="number" name="pnumber" class="form-control">
+            <p>Official Membership Pack Delivery Address:</p>
+            <input type="text" name="paddress" class="form-control">
+            <p>Postcode:</p>
+            <input type="text" name="pcode" class="form-control">
+            <p>State:</p>
+            <input type="text" name="state" class="form-control">
+            <p>Local Govt:</p>
+            <input type="text" name="lga" class="form-control">
+            <input type="submit" class="btn btn-success mt-4">
+            <a href="login" class="btn btn-primary mt-4 ms-5">Log in</a>
+        </form>
+    </div>
+</section>
